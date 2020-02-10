@@ -2,11 +2,14 @@
   "name": "jasmine",
   "version": "1.0.0",
   "scripts": {
-    "api": "jasmine"
+    "api": "jasmine",
+    "cypress": "cypress open"
   },
   "devDependencies": {
     "@types/jasmine": "3.5.0",
     "@types/node": "^12.12.17",
+    "@bahmutov/cy-api": "1.4.1",
+    "cypress": "4.0.1",
     "jasmine": "3.5.0",
     "request": "^2.88.0",
     "request-promise": "4.2.5",

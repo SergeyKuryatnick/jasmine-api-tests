@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://www.freelancer.com/",
+  "chromeWebSecurity": false,
+  "video": false,
+  "viewportWidth": 1200,
+  "viewportHeight": 1080,
+  "env": {
+    "USER_EMAIL": "anton.olkhovskyi@valor-software.com",
+    "USER_PASS": "bc?+c6QW@Cpv6u&",
+    "TESTING_TOKEN": "773c1601-1810-4930-891c-6d07eb82e201",
+    "DEVICE_TOKEN_URL": "https://www.freelancer.com/auth/device/",
+    "LOGIN_URL": "https://www.freelancer.com/ajax/auth/login.php"
+  }}
