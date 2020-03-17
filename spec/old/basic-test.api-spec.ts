@@ -1,6 +1,5 @@
 import {
     allHousesOnMatrixPageTemplate,
-    eachHouseHeaderInfoTemplate,
     eachHouseOnMatrixPageTemplate
 } from "./format-templates";
 import * as request from "request-promise";
@@ -56,27 +55,4 @@ describe('Health-check for ', () => {
 
         expect(unexpectedErrors.length).toBe(0)
     }, 90000);
-
-    it('each family header info format', async() => {
-        const unexpectedErrors = [];
-
-        for (let houseId of listOfHousesIds) {
-            const houseHeaderInfo = await request({
-                method: 'GET',
-                uri: `${baseUrl}home-header?placeId=${houseId}&lang=en`,
-                json: true
-            });
-
-            const expResult = joi.validate(houseHeaderInfo, eachHouseHeaderInfoTemplate);
-
-            if (!!expResult.error) {
-                unexpectedErrors.push({
-                    _id: houseId,
-                    message: expResult.error.message
-                });
-            }
-        }
-        console.log('________________________', unexpectedErrors, listOfHousesIds.length);
-        expect(unexpectedErrors.length).toBe(0)
-    }, 120000);
 });
